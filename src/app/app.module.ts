@@ -3,14 +3,20 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { CoreSharedModule } from 'projects/core/src/app/app.module';
+import { CommonSharedModule } from 'projects/common/src/app/app.module';
+import { NavComponent } from './nav/nav.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    NavComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    CoreSharedModule.forRoot(),
+    CommonSharedModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]
